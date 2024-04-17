@@ -28,23 +28,23 @@ a {
 .card-container {
     margin: auto;
     width: 80%;
-    display: flex;
+    display: grid;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content:space-evenly;
 }
 
 .card {
-    width: 30%;
+    width: 92%;
     margin: 8px;
     padding: 8px;
-    background-color: #a50044;
+    background-color: gray;
     border-radius: 15px;
     height: 480px;
 }
 
 .card h2, p {
-    color: #edbb00;
+    color: darkgray;
     padding: 2px;
     font-weight: bold;
 }
