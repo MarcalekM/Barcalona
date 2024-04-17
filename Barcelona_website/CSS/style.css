@@ -39,11 +39,21 @@ a {
     margin: 8px;
     padding: 8px;
     background-color: #a50044;
+    border-radius: 15px;
 }
 
 .card h2, p {
     color: #edbb00;
-    text-align: justify;
     padding: 2px;
     font-weight: bold;
+}
+
+.card p {
+    text-align: justify;
+}
+
+.card img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 15px;
 }
