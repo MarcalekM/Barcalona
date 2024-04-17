@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="CSS/style.css">
     <title>Barcelona Sights</title>
 </head>
-<body>
+<body ng-controller="myController">
     <header>
         <div class="nav">
             <h1>Barcelona Sights</h1>
@@ -18,7 +18,23 @@
         </div>
     </header>
     <main>
-
+        <div class="container">
+            <div class="card"  ng-repeat="barca in barcelona">
+                <img src="{{barca["img.jpg"]}}" alt="">
+                <h2>{{barca["title"]}}</h2>
+                <p>{{barca["description"]}}</p>
+            </div>
+        </div>
     </main>
+
+    <script>
+        let app = angular.module("myApp", []);
+        app.controller("myController", function($scope, $http){
+            $http.get("database_content.json").then(function(response){
+                $scope.barcelona = response.data;
+                console.log($scope.barcelona);
+            });
+        });
+    </script>
 </body>
 </html>
